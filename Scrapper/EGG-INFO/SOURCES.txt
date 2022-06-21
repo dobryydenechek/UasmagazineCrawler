@@ -72,7 +72,7 @@ crawlers/models.py
 crawlers/pipelines.py
 crawlers/settings.py
 crawlers/spiders/__init__.py
-crawlers/spiders/uasmagazine.py
+crawlers/spiders/nasa.py
 project.egg-info/PKG-INFO
 project.egg-info/SOURCES.txt
 project.egg-info/dependency_links.txt

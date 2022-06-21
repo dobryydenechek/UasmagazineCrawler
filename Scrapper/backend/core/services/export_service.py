@@ -15,7 +15,7 @@ from core.models import Export, Document, Spider
 
 
 def mark_exported_documents(export, documents):
-    print ("Document cols %d" % len(documents))
+    print "Document cols %d" % len(documents)
     for document in documents:
         document.exported_archive = export
         document.save()
@@ -113,7 +113,7 @@ def create_export(export_id=None, export_type='auto'):
     try:
         return_code = subprocess.call(command_arguments)
     except Exception as error:
-        print (error, command_arguments)
+        print error, command_arguments
     if return_code != 0:
         export.status = Export.STATUS_FAIL
         export.save()
@@ -129,7 +129,7 @@ def create_export(export_id=None, export_type='auto'):
     try:
         remove(archive_path)
     except Exception as error:
-        print ("Can`t remove file %s" % str(error))
+        print "Can`t remove file %s" % str(error)
     mark_exported_documents(export, documents)
 
     return True
